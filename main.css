@@ -1,12 +1,14 @@
 @font-face {
-    font-family:"Tilt Prism";
-    src: url('./fonts/TiltPrism[HROT\,VROT].woff2') format('woff2');
-    font-weight: 0 1000;
-    font-display:swap;
-}
+    src: url('fonts/LabDJRVariable[SIZE\,BEVL\,OVAL\,SPRK\,QUAD\,XSWP\,YSWP].woff') format("woff2"),
+         url('fonts/LabDJRColorVariable[SIZE,BEVL,OVAL,SPRK,QUAD,XSWP,YSWP].woff') format("woff");
+    font-family: 'Lab DJR Web';
+    font-style: normal;
+    font-weight: normal;
+    }
+
 
 body{
-    font-family: "Tilt Prism", sans-serif;
+    font-family: 'Lab DJR Web', sans-serif;
 }
 .variable-font{
     font-weight:1 ;
@@ -16,7 +18,7 @@ body{
     place-content: center;
     margin: 0;
     text-align: center;
-    font-variation-settings: "HROT" -45, "VROT" -45;
+    font-variation-settings: 'SIZE' 75, 'BEVL' 25;    
     transition: 
         font-weight 500ms,
         font-variation-settings 3s;
@@ -30,23 +32,36 @@ body{
     place-content: center;
     margin: 0;
     text-align: center;
-    font-variation-settings: "HROT" 45, "VROT" 45;
-}
+    font-variation-settings: 'SIZE' 50, 'OVAL' 100, 'QUAD' 100;}
 
 h3{
     font-weight:20; 
     text-align: center;
     font-size: 10em;
-    animation: weightChange 10s infinite;
+    animation: weightChange 3s infinite;
 }
 
 @keyframes weightChange {
-    0%, 100%{
-        font-variation-settings: "HROT" -45, "VROT" -45;
-    }
-    50%{font-variation-settings: "HROT" 45, "VROT" 45;
-    }
-    
+        0%{
+        font-variation-settings: 
+        'SIZE' 75, 
+        'OVAL' 0,
+        'BEVL' 10,
+        'SPRK' 50; }
+           50%{
+        font-variation-settings: 
+        'SIZE' 65, 
+        'OVAL' 40, 
+        'BEVL' 100,
+        'SPRK' 200;
+}
+            80%{
+    font-variation-settings: 
+        'SIZE' 85, 
+        'OVAL' 800, 
+        'BEVL' 800, 
+        'SPRK' 1000;
+}
 }
 
 h2{
